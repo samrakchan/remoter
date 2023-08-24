@@ -43,7 +43,6 @@ internal class KClassBuilder(element: Element, bindingManager: KBindingManager) 
                 .primaryConstructor(FunSpec.constructorBuilder()
                         .addParameter(ParameterSpec.builder("remoteBinder",
                                 ClassName("android.os", "IBinder").copy(true))
-                                .addModifiers(KModifier.PRIVATE)
                                 .build()).build())
 
                 .addProperty(PropertySpec.builder("remoteBinder", ClassName("android.os", "IBinder")
